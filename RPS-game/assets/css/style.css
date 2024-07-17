@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #334455;
+}
+
+.container{
+    padding: 2rem 7rem;
+    border-radius: 14px;
+    background: #fdf4bd;
+    box-shadow: 0 5px 10px rgb(0, 0, 0.1);
+}
+
+.result_images{
+    display: flex;
+    column-gap: 7rem;
+}
+
+.container.start .user_result{
+    transform-origin: left;
+    animation: userShake 0.7s ease infinite;
+}
+@keyframes userShake {
+    50%{
+        transform: rotate(10deg);
+    }
+}
+
+.container.start .cpu_result{
+    transform-origin: right;
+    animation: cpuShake 0.7s ease infinite;
+}
+@keyframes cpuShake {
+    50%{
+        transform: rotate(-10deg);
+    }
+}
+
+.result_images img{
+    width: 100px;
+}
+
+.user_result img{
+    transform:rotate(90deg) rotateY(180deg);
+}
+
+.cpu_result img{
+    transform:rotate(-90deg);
+}
+
+.result{
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+    margin-top: 1.5rem;
+}
+
+.option_images img{
+    width: 50px;
+}
+
+.option_images{
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+    justify-content: space-between;
+}
+
+.container.start .option_images{
+    pointer-events: none;
+}
+
+.option_image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.option_image:hover{
+    opacity: 1;
+}
+
+.option_image.active{
+    opacity: 1;
+}
+
+.option_image img{
+    pointer-events: none;
+}
+.option_image p{
+    color: black;
+    font-size: 1.235rem;
+    margin-top: 1rem;
+    pointer-events: none;
+}
+.credits {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+  }
+  .credits a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 800;
+  }
+  .credits a:hover {
+    text-decoration: underline;
+  }
+  
